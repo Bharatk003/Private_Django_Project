@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Delete post</h1>
+    <form action="" method="post">{% csrf_token %}
+        <p>Are you sure you want to delete "{{ post.title }}"?</p>
+         
+        <input style="border-radius:0.5;
+                    color: rgb(247, 34, 34);
+                    height: 25px;
+                    width: 80px;
+                    margin:  40px auto;
+                    
+                    " type="submit" value="Confirm" >
+    </form>
+{% endblock content %}
