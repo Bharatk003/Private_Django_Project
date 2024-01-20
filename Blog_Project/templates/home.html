@@ -10,8 +10,11 @@
 </head>
 <body>
     <header>
-        
         {%  block content %}
+        <div>
+            <a href="{% url 'signup' %}">Sign Up</a>
+        </div>
+        
 
             {% for post in object_list %}
                 <div class="post_entry">
