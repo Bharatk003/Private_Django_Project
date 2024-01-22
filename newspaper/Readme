@@ -1,0 +1,60 @@
+## Getting Started
+## Overview
+
+This is a newspaper website project that allows users to [briefly describe what your website does]. 
+
+## Features
+
+- signin
+- login
+- authorization and authentication implementation
+- CRUD operation on Article
+- comment section on Articles
+### Prerequisites
+
+- Python 3.x
+- [Additional dependencies, if any]
+
+### Installation
+
+1. Clone the repository:
+
+    ```bash
+    git clone https://github.com/your-username/newspaper-website.git
+    ```
+
+2. Change into the project directory:
+
+    ```bash
+    cd newspaper-website
+    ```
+
+3. Install dependencies using `pipenv`:
+
+    ```bash
+    pipenv install
+    ```
+
+4. Activate the virtual environment:
+
+    ```bash
+    pipenv shell
+    ```
+
+### Configuration
+
+1. Copy the sample configuration file:
+
+    ```bash
+    cp .env.example .env
+    ```
+
+2. Modify the `.env` file with your configuration settings.
+
+### Usage
+
+1. Run the development server:
+
+    ```bash
+    python manage.py runserver
+    ```
