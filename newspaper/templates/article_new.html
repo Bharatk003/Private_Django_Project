@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+<html lang="en">    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Article</title>
+</head>
+<body>
+    {% block content %}
+
+    <h1>New Article</h1>
+    <div>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button class="btn btn-success ml-2" type="submit">Save</button>
+        </form>
+    </div>
+
+    {% endblock content %}
+</body>
+</html>

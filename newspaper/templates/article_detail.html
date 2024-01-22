@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <style>
+        /* Custom styling for the scrollable div */
+         
+    </style>
+</head>
+<body>
+        
+    {% block content %}
+        <div class="article-entry">
+        <h2>{{ object.title }}</h2>
+        <p>by {{ object.author }} | {{ object.date }}</p>
+        <p>{{ object.body }}</p>
+        </div>
+
+        <div class=" card-footer ">
+            <h5>comments</h5>
+            <div style="
+                max-height: 200px;
+                overflow-y: auto;
+                border: 1px solid #cccccc;
+                padding: 10px;
+            ">
+                {% for comment in article.comments.all %}
+                <p>
+                <span class="font-weight-bold">{{ comment.author }} &middot;</span>
+                {{ comment }}
+                </p>
+                {% endfor %}
+            </div>
+            
+        </div>
+     
+        <p><a href="{% url 'article_edit' article.pk %}">Edit</a> |
+            <a href="{% url 'article_delete' article.pk %}">Delete</a> |
+             <a id="right" href="{% url 'comment' article.pk %}">Comment</a> 
+        </p>
+        <p>Back to <a  href="{% url 'article_list' %}">All Articles</a>.</p>
+            
+    {% endblock content %}
+</body>
+</html>
